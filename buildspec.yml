@@ -3,8 +3,7 @@ version: 0.2
 phases:
   pre_build:
     commands:
-      - yum update -y
-      - sudo amazon-linux-extras install docker
+      - apt-get install docker -y
       - service docker start
   build:
     commands:
