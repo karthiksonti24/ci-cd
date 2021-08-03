@@ -4,7 +4,8 @@ phases:
   pre_build:
     commands:
       - yum update -y
-      - amazon-linux-extras install docker -y
+      - yum install docker -y
+      - service docker start
   build:
     commands:
       - docker build -t flask .
