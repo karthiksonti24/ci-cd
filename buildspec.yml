@@ -3,8 +3,8 @@ version: 0.2
 phases:
   pre_build:
     commands:
-      - apt-get install docker-ce -y
-      - service docker start
+      - curl -fsSL https://get.docker.com -o get-docker.sh
+      - sh get-docker.sh
   build:
     commands:
       - docker build -t flask .
