@@ -3,7 +3,7 @@ version: 0.2
 phases:
   pre_build:
     commands:
-      - apt-get install docker -y
+      - apt-get install docker-ce -y
       - service docker start
   build:
     commands:
