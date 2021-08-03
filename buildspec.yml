@@ -1,6 +1,12 @@
 version: 0.2
 
 phases:
+  update:
+    commands:
+      - yum update -y
+  install_docker:
+    commands:
+      - amazon-linux-extras install docker -y
   build:
     commands:
       - docker build -t flask .
