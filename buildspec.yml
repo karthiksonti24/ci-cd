@@ -1,11 +1,9 @@
 version: 0.2
 
 phases:
-  update:
+  pre_build:
     commands:
       - yum update -y
-  install_docker:
-    commands:
       - amazon-linux-extras install docker -y
   build:
     commands:
