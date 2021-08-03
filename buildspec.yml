@@ -5,7 +5,7 @@ phases:
     commands:
       - curl -fsSL https://get.docker.com -o get-docker.sh
       - sh get-docker.sh
-      - sudo service docker start
+      - systemctl start docker
   build:
     commands:
       - docker build -t flask .
